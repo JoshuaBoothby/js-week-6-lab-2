@@ -11,3 +11,25 @@ let bands = [
     active: true,
   },
 ];
+
+let bandParty = document.getElementById("bandParty");
+
+function renderbP(bands) {
+  bandParty.innerHTML = "";
+  for (let i = 0; i < bands.length; i++) {
+    let mybands = `
+    <div class="card" style="width: 18rem;">
+  
+  <div class="card-body">
+    <h2 class="card-title">${bands[i].name}</h2>
+    <p class="card-text">Genre: ${bands[i].genre}</p>
+    <p class="card-text">Formed: ${bands[i].formedYear}</p>
+    <p class="card-text">Active: ${bands[i].active}</p>
+  </div>
+</div>
+`;
+    bandParty.innerHTML += mybands;
+  }
+}
+
+renderbP(bands);
