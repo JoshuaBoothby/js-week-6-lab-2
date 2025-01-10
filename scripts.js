@@ -13,8 +13,7 @@ let bands = [
 ];
 
 let bandParty = document.getElementById("bandParty");
-
-function renderbP(bands) {
+function renderbP() {
   bandParty.innerHTML = "";
   for (let i = 0; i < bands.length; i++) {
     let mybands = `
